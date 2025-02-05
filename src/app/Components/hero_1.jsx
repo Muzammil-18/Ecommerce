@@ -1,6 +1,7 @@
 import { Catamaran, Kreon } from "next/font/google";
 import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 
 const roboto = Catamaran({
   weight: "400",
@@ -15,39 +16,43 @@ const satoshi = Kreon({
 const Hero_1 = () => {
   return (
     <>
-      <section className="hidden md:flex max-w-[1280px] h-[584px] justify-center w-[90%] mx-10 bg-[#2A254B] ">
-        <div className="flex flex-col ">
-          <div className="w-[602px] h-[81px] relative top-[443px] left-[60px] space-y-4 text-white">
-            <p className={`${satoshi.className} text-lg`}>
+      <section className="hidden lg:flex  h-[584px] justify-center w-full bg-[#2A254B] relative  ">
+        <div className="w-2/3 flex flex-col ">
+          <div className=" h-[81px] relative top-[363px] left-[40px]  ">
+            <p className={`${satoshi.className} text-base`}>
               A new era with eco-friendly furniture with Avelon, the French
               luxury retail brand
             </p>
-            <p className={`${satoshi.className} text-lg`}>
+            <p className={`${satoshi.className} text-base`}>
               with nice fonts, testeful colors and a beautiful way to display
               things digitally
             </p>
-            <p className={`${satoshi.className} text-lg`}>
+            <p className={`${satoshi.className} text-base`}>
               using modern web technologies
             </p>
+            
           </div>
-          <div className=" w-[513px] h-[187px] text-white relative  left-[60px] pt-10 pl-10 space-y-5">
+          <div className=" h-[187px] text-white relative  left-[40px] pt-1 space-y-4">
             <p className={`text-4xl font-thin ${roboto.className}`}>
               The Furniture Brand For The
             </p>
             <p className={`text-4xl font-thin ${roboto.className}`}>
-              Future, with timeless designs
+              Future, with timeless designsrt
             </p>
+
+            <Link href="/products">
             <Button
               height={56}
               width={170}
               bgColor="rgba(249, 249, 249, 0.15)"
               textColor="white"
-              mtop="40px"
+              mtop="30px"
               text="View Collection"
             />
+           </Link> 
           </div>
         </div>
-        <div className=" w-full relative ">
+        <div className=" w-1/3 relative ">
           <Image
             src="/assets/img1.jpg"
             alt="Hero Image Here"
@@ -58,13 +63,13 @@ const Hero_1 = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:hidden bg-[#2A254B] w-full h-[502px]">
-        <div className="w-[342px] h-[135px] relative top-[40px] left-[24px] space-y-3 text-white  font-bold">
+      <section className="flex flex-col lg:hidden bg-[#2A254B] w-full  h-[502px]">
+        <div className="w-[342px] h-[135px] relative top-[40px]  space-y-3 mx-auto text-white  font-bold">
           <p className={`${roboto.className} text-4xl`}>The Furniture brand</p>
           <p className={`${roboto.className} text-4xl`}>for the future, with</p>
           <p className={`${roboto.className} text-4xl`}>timeless designs</p>
         </div>
-        <div className="w-[342px] h-[223px] relative top-[135px] left-[24px] text-white gap-8">
+        <div className="w-[342px] h-[223px] relative top-[135px]  mx-auto text-white gap-8">
           <p className={`${satoshi.className} text-md`}>
             A new era with eco-friendly furniture with
           </p>
@@ -81,6 +86,7 @@ const Hero_1 = () => {
           <p className={`${satoshi.className} text-md`}>
             using modern web technologies
           </p>
+          <Link href="/products">
           <Button
             height={56}
             width={325}
@@ -89,6 +95,7 @@ const Hero_1 = () => {
             mtop="17px"
             text="View Collection"
           />
+          </Link>
         </div>
       </section>
     </>
